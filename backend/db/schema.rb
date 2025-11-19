@@ -15,11 +15,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_19_014930) do
   enable_extension "pg_catalog.plpgsql"
 
   create_table "books", force: :cascade do |t|
-    t.string "title"
-    t.string "isbn"
-    t.integer "page_number"
-    t.integer "year"
-    t.json "raw_data", default: {}
+    t.string "title", null: false
+    t.string "isbn", null: false
+    t.integer "page_number", null: false
+    t.integer "year", null: false
+    t.json "raw_data", default: {}, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
