@@ -41,7 +41,7 @@ module BooksServices
         title: response["title"],
         page_count: response["number_of_pages"] || 0,
         raw_data: response,
-        published_at: FormatDate.extract_year(response["publish_date"])
+        published_at: FormatDate.extract_year(response["publish_date"]) || 0
       )
     end
   end
