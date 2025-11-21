@@ -1,0 +1,10 @@
+pt-BR:
+  services:
+    fetch_book:
+      errors:
+        book_not_found: "Livro não encontrado."
+
+        openlibrary:
+          request_failed: "Erro ao consultar o OpenLibrary. Código de status: %{status}"
+          invalid_response: "A resposta do OpenLibrary é inválida."
+          connection_failed: "%{error}"

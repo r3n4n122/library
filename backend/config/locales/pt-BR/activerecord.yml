@@ -1,0 +1,20 @@
+pt-BR:
+  activerecord:
+    errors:
+      template:
+        header:
+          one:   "1 erro impediu que este %{model} fosse salvo"
+          other: "%{count} erros impediram que este %{model} fosse salvo"
+        body: "Houve problemas com os seguintes campos:"
+
+      messages:
+        record_invalid: "%{errors}"
+        blank: "não pode ficar em branco"
+
+    models:
+      book: "Livro"
+
+    attributes:
+      book:
+        title: "Título"
+        isbn: "ISBN"

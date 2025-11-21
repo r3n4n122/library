@@ -1,0 +1,6 @@
+pt-BR:
+  services:
+    books:
+      search:
+        errors:
+          isbn: "É necessário informar o ISBN"

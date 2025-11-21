@@ -1,0 +1,8 @@
+pt-BR:
+  services:
+    books:
+      create:
+        errors:
+          isbn_required: "ISBN é obrigatório"
+          isbn_not_found: "Livro não encontrado"
+          book_exists: "Livro já cadastrado"

@@ -1,0 +1,22 @@
+pt-BR:
+  controllers:
+    books:
+      search:
+        success: "Livro encontrado com sucesso"
+        error: "Livro não encontrado"
+      create:
+        success: "Criado com sucesso"
+        error: "Erro ao criar livro"
+      update:
+        success: "Livro Atualizado com sucesso"
+        error: "Erro ao atualizar livro"
+      show:
+        success: "Livro exibido com sucesso"
+        not_found: "Livro não encontrado"
+        error: "Erro ao exibir livro"
+      index:
+        sucess: "Dados carregados com sucesso"
+        error: "Erro ao carregar dados"
+      destroy:
+        success: "Livro apagado com sucesso"
+        error: "Erro ao excluir livro"
