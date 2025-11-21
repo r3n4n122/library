@@ -39,7 +39,7 @@ module BooksServices
       Book.create!(
         isbn: isbn,
         title: response["title"],
-        page_count: response["number_of_pages"],
+        page_count: response["number_of_pages"] || 0,
         raw_data: response,
         published_at: FormatDate.extract_year(response["publish_date"])
       )

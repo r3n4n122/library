@@ -14,7 +14,7 @@ module BooksServices
       books = apply_order(books)
       books = apply_pagination(books)
 
-      Pagination.records(books)
+      format_books(books)
     end
 
     private
@@ -25,12 +25,9 @@ module BooksServices
       scope.where("books.title ILIKE ?", "%#{@params[:search].strip}%")
     end
 
-
     def apply_order(scope)
       order = @params[:order_by].presence || DEFAULT_ORDER
-
       return scope.order(DEFAULT_ORDER) if order.match?(/;/)
-
       scope.order(order)
     end
 
@@ -39,6 +36,20 @@ module BooksServices
       per_page = @params[:per_page] || DEFAULT_PER_PAGE
 
       scope.page(page).per(per_page)
+    end
+
+    def format_books(books)
+      formatted_data = books.map do |book|
+        {
+          id: book.id,
+          isbn: book.isbn,
+          title: book.title,
+          page_count: book.page_count.zero? ? "Não informado" : book.page_count,
+          published_at: book.published_at.zero? ? "Não informado" : book.published_at
+        }
+      end
+
+      Pagination.records(books).merge(data: formatted_data)
     end
   end
 end
