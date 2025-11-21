@@ -1,0 +1,1 @@
+class OpenLibraryError < StandardError; end

@@ -1,0 +1,1 @@
+class BookNotFound < StandardError; end
