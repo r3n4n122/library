@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
-// import New from './pages/new/New';
+import Books from './pages/books'
+// import Books from './pages/books'
 // import Edit from './pages/edit/Edit'
 
 ReactDOM.render(
@@ -10,8 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/novo" element={<New />} />
-        <Route path="/editar/:id" element={<Edit />} /> */}
+        <Route path="/books" element={ <Books />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

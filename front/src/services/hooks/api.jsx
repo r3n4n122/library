@@ -38,4 +38,20 @@ export const PostInstance = (params = {}, route = "") => {
   );
 };
 
+export const DeleteInstance = (params = {}, route = "") => {
+
+  if (cancel[route]) {
+    cancel[route].abort();
+  }
+
+  cancel[route] = controller;
+
+  return request().delete(
+    `${route}${params?.id ? `/${params?.id}` : ""}`,
+    params
+  );
+};
+
+
+
 

@@ -1,12 +1,14 @@
 import { GetInstance } from "../../services/hooks/api";
-import { InputTextField } from "../../components/inputs/InputTextField";
 import { BreadcrumbsComponent } from "../../components/BreadcrumbsComponent";
 import { useState } from "react";
 import { useFormik } from "formik";
-import { Grid } from "@mui/material";
+import { Grid, Button } from "@mui/material";
 import { ToastContainer, toast } from 'react-toastify';
 import { Form } from "./helper/form";
+import { useNavigate } from 'react-router-dom';
+
 export default function Home() {
+  const navigate = useNavigate();
   const [data, setData] = useState({})
 
   const formik = useFormik({
@@ -41,6 +43,15 @@ export default function Home() {
             links={[
               { value: "Home", url: "/" }
             ]}
+            actionButton={
+              <Button 
+                variant="contained" 
+                color="primary" 
+                onClick={() =>  navigate('/books')}
+              >
+                Livros Salvos
+              </Button>
+            }
           />
         </Grid>
         <Form formik={formik} data={data} />

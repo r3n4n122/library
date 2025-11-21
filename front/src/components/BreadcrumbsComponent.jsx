@@ -1,23 +1,27 @@
 import { 
   Link, 
   Breadcrumbs, 
-  Grid 
+  Grid, 
+  Box 
 } from '@mui/material';
 
-export const BreadcrumbsComponent = ({ links }) => {
+export const BreadcrumbsComponent = ({ links, actionButton }) => {
   return (
-    <Grid container
+    <Grid 
+      container
       sx={{
         m: 0, 
         bgcolor: "black", 
         p: 2,
+        alignItems: "center",
+        justifyContent: "space-between"
       }}
-      >
+    >
       <Breadcrumbs
         aria-label="breadcrumb"
         sx={{
           fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
-          fontSize: '1rem',
+          fontSize: '25px',
           fontWeight: 500,
           color: "grey.300"
         }}
@@ -38,6 +42,7 @@ export const BreadcrumbsComponent = ({ links }) => {
           </Link>
         ))}
       </Breadcrumbs>
+      {actionButton && <Box>{actionButton}</Box>}
     </Grid>
   );
 };
