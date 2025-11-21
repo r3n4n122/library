@@ -32,6 +32,7 @@ docker compose up --build
 > A aplicação segue uma arquitetura de API versionada com Service Objects, mantendo os controllers organizados e limpas, delegando a lógica de negócio para serviços específicos. Isso facilita manutenção, testes e escalabilidade da aplicação.
 
 **Tecnologias utilizadas:**
+- **Ruby on Rails**
 - **net-http**: para fazer requisições à API externa da Open Library  
 - **kaminari**: para paginação de listas de livros  
 - **rack-cors**: permite que o frontend faça requisições à API, liberando chamadas entre diferentes origens (CORS)  
