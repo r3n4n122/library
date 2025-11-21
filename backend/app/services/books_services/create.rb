@@ -7,7 +7,7 @@ module BooksServices
     def call
       isbn = @params[:isbn].presence
       raise ArgumentError, I18n.t("services.books.create.errors.isbn_required") if isbn.nil?
-
+      isbn = isbn.strip
       response = fetch_book(isbn)
 
       extracted_isbn = extract_isbn(response)

@@ -11,8 +11,9 @@ pt-BR:
         success: "Livro Atualizado com sucesso"
         error: "Erro ao atualizar livro"
       index:
-        sucess: "Dados carregados com sucesso"
+        success: "Dados carregados com sucesso"
         error: "Erro ao carregar dados"
       destroy:
         success: "Livro apagado com sucesso"
         error: "Erro ao excluir livro"
+        not_found: "Livro não encontrado"

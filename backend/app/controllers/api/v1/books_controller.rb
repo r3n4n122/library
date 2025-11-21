@@ -25,6 +25,7 @@ module Api
       
       def destroy
         book = Book.find_by(id: params[:id])
+        
         return api_response("controllers.books.destroy.not_found", :not_found) unless book
 
         book.destroy

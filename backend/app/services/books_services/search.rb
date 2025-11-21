@@ -5,7 +5,7 @@ module BooksServices
     end
 
     def call
-      isbn = @params[:book][:isbn]
+      isbn = @params[:book][:isbn]&.strip
       raise ArgumentError, I18n.t("services.books.search.errors.isbn") unless isbn.present?
       
       response = fetch_book(isbn)
