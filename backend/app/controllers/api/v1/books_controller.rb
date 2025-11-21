@@ -22,17 +22,7 @@ module Api
       rescue StandardError => e
         api_response("controllers.books.create.error", :unprocessable_entity, e.message)
       end
-
-      def show
-        book = Book.find_by(id: params[:id])
-        return api_response("controllers.books.show.not_found", :not_found) unless book
-
-        result = BookResources::Show.call(book)
-        api_response("controllers.books.show.success", :ok, result)
-      rescue StandardError => e
-        api_response("controllers.books.show.error", :unprocessable_entity, e.message)
-      end
-
+      
       def destroy
         book = Book.find_by(id: params[:id])
         return api_response("controllers.books.destroy.not_found", :not_found) unless book

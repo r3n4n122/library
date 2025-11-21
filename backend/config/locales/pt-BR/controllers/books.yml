@@ -10,10 +10,6 @@ pt-BR:
       update:
         success: "Livro Atualizado com sucesso"
         error: "Erro ao atualizar livro"
-      show:
-        success: "Livro exibido com sucesso"
-        not_found: "Livro não encontrado"
-        error: "Erro ao exibir livro"
       index:
         sucess: "Dados carregados com sucesso"
         error: "Erro ao carregar dados"
