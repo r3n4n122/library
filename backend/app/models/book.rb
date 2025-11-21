@@ -1,3 +1,3 @@
 class Book < ApplicationRecord
-  validates :title, :isbn, :page_number, :year, :raw_data, presence: true
+  validates :title, :isbn, :page_count, :published_at, :raw_data, presence: true
 end

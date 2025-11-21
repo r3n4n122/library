@@ -17,10 +17,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_19_014930) do
   create_table "books", force: :cascade do |t|
     t.string "title", null: false
     t.string "isbn", null: false
-    t.integer "page_number", null: false
-    t.integer "year", null: false
+    t.integer "page_count", null: false
+    t.integer "published_at", null: false
     t.json "raw_data", default: {}, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["isbn"], name: "index_books_on_isbn", unique: true
   end
 end
