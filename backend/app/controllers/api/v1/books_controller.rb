@@ -1,6 +1,7 @@
 module Api
   module V1
     class BooksController < Apiv1Controller 
+      wrap_parameters false
 
       def index
         results = BooksServices::Index.new(params).call
@@ -37,7 +38,7 @@ module Api
       private
 
       def create_params
-        params.require(:book).permit(:isbn)
+        params.permit(:isbn)
       end
     end
   end

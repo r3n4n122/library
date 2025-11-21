@@ -74,7 +74,10 @@ export default function Books() {
           ]}
         />
       </Grid>
-      <ToastContainer theme="colored"/>
+      <ToastContainer 
+        autoClose={1000} 
+        theme="colored"
+      />
       <Grid item xs={10}>
         <TextField
           fullWidth

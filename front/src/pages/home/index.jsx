@@ -13,9 +13,7 @@ export default function Home() {
 
   const formik = useFormik({
     initialValues: {
-      book: {
-        isbn: "",
-      }
+      isbn: "",
     },
     onSubmit: (values) => {
       GetInstance(values, "/books/search")
@@ -37,7 +35,10 @@ export default function Home() {
         justifyContent="center"
         alignItems="center"
       >
-        <ToastContainer theme="colored"/>
+        <ToastContainer 
+          autoClose={1000}
+          theme="colored"
+        />
         <Grid item xs={12}>
           <BreadcrumbsComponent
             links={[

@@ -34,7 +34,10 @@ export const Form = ({ formik, data }) => {
           backgroundColor: "#f9f9f9"
         }}
       >
-        <ToastContainer theme="colored" />
+        <ToastContainer 
+          autoClose={1000} 
+          theme="colored" 
+        />
         <Stack spacing={3} alignItems="center">
           <Grid container spacing={2} >
             <Grid item xs={10}>
@@ -42,7 +45,7 @@ export const Form = ({ formik, data }) => {
                 placeholder="Digite o ISBN" 
                 formik={formik}
                 label="ISBN"
-                id="book.isbn"
+                id="isbn"
               />
             </Grid>
             <Grid item xs={1}>
